@@ -13,7 +13,7 @@ interface Credentials {
   password: string
 }
 
-module.exports = (RED: NodeAPI) => {
+export default (RED: NodeAPI) => {
   function createNodeInstance(this: Node<Credentials>, config: NodeDef) {
     // eslint-disable-next-line @typescript-eslint/no-this-alias
     const node = this

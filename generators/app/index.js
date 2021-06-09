@@ -61,7 +61,6 @@ module.exports = class extends Generator {
   }
 
   defaultfolder() {
-    this.log(`paths:${this.destinationPath},${defaultFolder}`);
     if (this.props.name !== defaultFolder) {
       this.log(
         `Your generator must be inside a folder named ${this.props.name}\nI'll automatically create this folder.`
@@ -76,16 +75,14 @@ module.exports = class extends Generator {
       ? this.props.name
       : `node-red-contrib-${this.props.name}`;
     const templates = [
-      "dot_eslintrc.json",
+      "dot_eslintrc.js",
       "dot_gitignore",
       "dot_npmignore",
-      ".vscode",
-      "jest.config.js.tmpl",
       "package.json.tmpl",
       "tsconfig.json",
-      "src/__nodename__.integration.test.ts",
+      "src/__nodename___integration.spec.ts",
       "src/__nodename__.ts",
-      "src/__nodename__.unit.test.ts",
+      "src/__nodename__.spec.ts",
       "src/__nodename___node.html",
       "src/__nodename___node.ts"
     ];

@@ -4,5 +4,4 @@ src
 .vscode
 tsconfig.json
 *.js.map
-jest.config.js
-.eslintrc.json
+.eslintrc.js
